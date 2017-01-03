@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16D17a" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="Companies" representedClassName="Companies" syncable="YES">
+        <attribute name="cAddress" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="departmentsofcompany" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Departments" inverseName="companyofdepartment" inverseEntity="Departments" syncable="YES"/>
+    </entity>
+    <entity name="Departments" representedClassName="Departments" syncable="YES">
+        <attribute name="dBudget" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="dCreated" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="dName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="companyofdepartment" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Companies" inverseName="departmentsofcompany" inverseEntity="Companies" syncable="YES"/>
+        <relationship name="employeesofdepartment" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Employees" inverseName="departmentofemployee" inverseEntity="Employees" syncable="YES"/>
+    </entity>
+    <entity name="Employees" representedClassName="Employees" syncable="YES">
+        <attribute name="eName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="eStarted" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="departmentofemployee" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Departments" inverseName="employeesofdepartment" inverseEntity="Departments" syncable="YES"/>
+    </entity>
+    <fetchRequest name="getAllCompanies" entity="Companies"/>
+    <fetchRequest name="getAllDepartments" entity="Departments"/>
+    <fetchRequest name="getAllEmployees" entity="Employees"/>
+    <elements>
+        <element name="Companies" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="Departments" positionX="-54" positionY="9" width="128" height="120"/>
+        <element name="Employees" positionX="-36" positionY="36" width="128" height="90"/>
+    </elements>
+</model>

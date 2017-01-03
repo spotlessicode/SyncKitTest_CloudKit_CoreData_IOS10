@@ -1,0 +1,22 @@
+PODS:
+  - SyncKit (0.3.0)
+
+DEPENDENCIES:
+  - SyncKit (from `https://github.com/mentrena/SyncKit.git`, branch `objectIdentifier`)
+
+EXTERNAL SOURCES:
+  SyncKit:
+    :branch: objectIdentifier
+    :git: https://github.com/mentrena/SyncKit.git
+
+CHECKOUT OPTIONS:
+  SyncKit:
+    :commit: a7e0318c5029882da13346d3d283b2ca5bd3b3f1
+    :git: https://github.com/mentrena/SyncKit.git
+
+SPEC CHECKSUMS:
+  SyncKit: 291810581c7d91aa5c45c85d1b951f6a101477c4
+
+PODFILE CHECKSUM: df8baa9c03f406c4108fe2ba04e6c59c9f957d24
+
+COCOAPODS: 1.1.1

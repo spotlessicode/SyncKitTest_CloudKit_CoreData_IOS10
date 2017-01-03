@@ -1,0 +1,1 @@
+../../../SyncKit/SyncKit/Classes/QSSynchronizer/QSCloudKitSynchronizer.h

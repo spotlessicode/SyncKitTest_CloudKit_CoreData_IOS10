@@ -1,0 +1,1 @@
+../../../SyncKit/SyncKit/Classes/CoreData/QSPendingRelationship+CoreDataClass.h
