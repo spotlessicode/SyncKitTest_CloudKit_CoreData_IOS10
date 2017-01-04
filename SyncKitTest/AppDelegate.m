@@ -205,7 +205,9 @@
         NSLog(@"Running %@ '%@'", self.class, NSStringFromSelector(_cmd));
     }
     __block NSError *error = nil;
-    [self.managedObjectContext save:&error];
+    [self.managedObjectContext performBlockAndWait:^{
+        [self.managedObjectContext save:&error];
+    }];
     completion(error);
 }
 
@@ -226,7 +228,9 @@
     
     if (!error) {
         NSLog(@"Saved");
-        [self.managedObjectContext save:&error];
+        [self.managedObjectContext performBlockAndWait:^{
+            [self.managedObjectContext save:&error];
+        }];
     }
     completion(error);
 }

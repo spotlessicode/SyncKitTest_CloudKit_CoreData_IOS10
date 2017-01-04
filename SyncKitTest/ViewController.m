@@ -45,24 +45,24 @@
     
     
     Companies *c1= [NSEntityDescription insertNewObjectForEntityForName:@"Companies" inManagedObjectContext:self.managedObjectContext];
-    c1.cName = @"FirstCompany";
+    c1.cName = @"Company1";
     c1.cAddress = @"MilkyWay1";
     
     Companies *c2= [NSEntityDescription insertNewObjectForEntityForName:@"Companies" inManagedObjectContext:self.managedObjectContext];
-    c2.cName = @"FirstCompany";
-    c2.cAddress = @"MilkyWay1";
+    c2.cName = @"Company2";
+    c2.cAddress = @"MilkyWay2";
     
     Companies *c3= [NSEntityDescription insertNewObjectForEntityForName:@"Companies" inManagedObjectContext:self.managedObjectContext];
-    c3.cName = @"FirstCompany";
-    c3.cAddress = @"MilkyWay1";
+    c3.cName = @"Company3";
+    c3.cAddress = @"MilkyWay3";
     
     Companies *c4= [NSEntityDescription insertNewObjectForEntityForName:@"Companies" inManagedObjectContext:self.managedObjectContext];
-    c4.cName = @"FirstCompany";
-    c4.cAddress = @"MilkyWay1";
+    c4.cName = @"Company4";
+    c4.cAddress = @"MilkyWay4";
     
     Companies *c5= [NSEntityDescription insertNewObjectForEntityForName:@"Companies" inManagedObjectContext:self.managedObjectContext];
-    c5.cName = @"FirstCompany";
-    c5.cAddress = @"MilkyWay1";
+    c5.cName = @"Company5";
+    c5.cAddress = @"MilkyWay5";
     
     
     [self.managedObjectContext save:nil];
